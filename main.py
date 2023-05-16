@@ -1,34 +1,25 @@
 
 #Counting of Event Data from video file.
-#Count Event Data
 import cv2
 import time
-
-
 
 def count_event_data(Video: "video.mp4", targetPattern1: "image.png",targetPattern2,targetPattern3,targetPattern4, frame_list1,frame_list2,frame_list3,frame_list4) ->"prints count of item":
 
 
     # Load the video file
     cap = cv2.VideoCapture(Video) # e.g. 'video.mp4'
-
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+
     # Load the pattern image
     pattern_img1 = cv2.imread(targetPattern1) # e.g. "image.png"
-
     pattern_img2 = cv2.imread(targetPattern2)  # e.g. "image.png"
-
     pattern_img3 = cv2.imread(targetPattern3)  # e.g. "image.png"
-
     pattern_img4 = cv2.imread(targetPattern4)  # e.g. "image.png"
 
     # Convert the pattern image to grayscale
     pattern_gray1 = cv2.cvtColor(pattern_img1, cv2.COLOR_BGR2GRAY)
-
     pattern_gray2 = cv2.cvtColor(pattern_img2, cv2.COLOR_BGR2GRAY)
-
     pattern_gray3 = cv2.cvtColor(pattern_img3, cv2.COLOR_BGR2GRAY)
-
     pattern_gray4 = cv2.cvtColor(pattern_img4, cv2.COLOR_BGR2GRAY)
 
     # Get the width and height of the pattern image
@@ -150,7 +141,7 @@ def find_count(marked_list,targetPattern):
     print(f"Number of count:",targetPattern, count_item)
 
 
-##### How to use the count event data function #####
+############### How to use the count event data function ###############
 # First example
 
 # Timer to measure time of execution
@@ -167,7 +158,6 @@ end_time = time.time()
 execution_time = end_time - start_time
 
 print("Execution Time:", execution_time, "seconds")
-
 
 
 # Second example - can be initialized simultaneously. You can have as many examples as you like.
