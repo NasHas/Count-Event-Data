@@ -14,10 +14,10 @@ def count_event_data(Video: "video.mp4", targetPattern1: "image.png",targetPatte
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     # Load the pattern image
     pattern_img1 = cv2.imread(targetPattern1) # e.g. "image.png"
-    pattern_img2 = cv2.imread(targetPattern2)  # e.g. "image.png"
-    pattern_img3 = cv2.imread(targetPattern3)  # e.g. "image.png"
-    pattern_img4 = cv2.imread(targetPattern4)  # e.g. "image.png"
-    pattern_img5 = cv2.imread(targetPattern5)  # e.g. "image.png"
+    pattern_img2 = cv2.imread(targetPattern2)  # e.g. "image2.png"
+    pattern_img3 = cv2.imread(targetPattern3)  # e.g. "image.3png"
+    pattern_img4 = cv2.imread(targetPattern4)  # e.g. "image4.png"
+    pattern_img5 = cv2.imread(targetPattern5)  # e.g. "image5.png"
 
     # Convert the pattern image to grayscale
     pattern_gray1 = cv2.cvtColor(pattern_img1, cv2.COLOR_BGR2GRAY)
@@ -151,6 +151,10 @@ def find_count(marked_list,targetPattern):
     # Print the number of changepoints detected
     print(f"Number of count:",targetPattern, count_item)
 
+
+
+
+
 ############### How to use the count event data function ###############
 # First example
 
@@ -162,7 +166,7 @@ frame_list2 = []
 frame_list3 = []
 frame_list4 = []
 frame_list5 = []
-count_event_data("Video.mp4","TargetPattern1.png", "TargetPattern2.png", "TargetPattern3.png", "TargetPattern4.png", "TargetPattern5.png", frame_list1, frame_list2, frame_list3, frame_list4, frame_list5)
+count_event_data("Video.mp4","TargetPattern1(clutch).png", "TargetPattern2(camera).png", "TargetPattern3(armsawp).png", "TargetPattern4(coagulation R).png", "TargetPattern5(coagulation L).png", frame_list1, frame_list2, frame_list3, frame_list4, frame_list5)
 
 #In the Video.mp4, the name of your video-file should be inserted. In the TargetPattern1-5.png the name of your target pattern images should be inserted.
 
@@ -182,7 +186,7 @@ frame_list2 = []
 frame_list3 = []
 frame_list4 = []
 frame_list5 = []
-count_event_data("Video.mp4","TargetPattern1.png", "TargetPattern2.png", "TargetPattern3.png", "TargetPattern4.png", "TargetPattern5.png", frame_list1, frame_list2, frame_list3, frame_list4, frame_list5)
+count_event_data("Video.mp4","TargetPattern1(clutch).png", "TargetPattern2(camera).png", "TargetPattern3(armsawp).png", "TargetPattern4(coagulation R).png", "TargetPattern5(coagulation L).png", frame_list1, frame_list2, frame_list3, frame_list4, frame_list5)
 
 end_time = time.time()
 execution_time = end_time - start_time
