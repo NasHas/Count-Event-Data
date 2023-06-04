@@ -55,7 +55,7 @@ def count_event_data(Video: "video.mp4", targetPattern1: "image.png",targetPatte
             res5 = cv2.matchTemplate(frame_gray, pattern_gray5, cv2.TM_CCOEFF_NORMED)
 
             # Define a threshold for the match score
-            threshold = 0.98
+            threshold = 0.90
             threshold2 = 0.95
 
             # Get the location of the match
@@ -127,7 +127,7 @@ def count_event_data(Video: "video.mp4", targetPattern1: "image.png",targetPatte
     # Create marked array of stars, where the item value is >= than threshold.
     marked_list1 = ['*' if item >= threshold else item for item in frame_list1]
     marked_list2 = ['*' if item >= threshold else item for item in frame_list2]
-    marked_list3 = ['*' if item >= threshold2 else item for item in frame_list3]
+    marked_list3 = ['*' if item >= threshold else item for item in frame_list3]
     marked_list4 = ['*' if item >= threshold2 else item for item in frame_list4]
     marked_list5 = ['*' if item >= threshold2 else item for item in frame_list5]
 
