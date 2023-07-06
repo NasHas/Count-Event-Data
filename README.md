@@ -13,4 +13,4 @@ Instructions:
 6) If you want, the code in the middle that has been commented out, can be inserted again, so you can visually see how the code finds the events. A window with the video will appear, and every time an event is activated, fx. when coagulation is used or clutch is used, a red marker will appear around the pattern. After the script has finished, you will get the count of the event in total amount, and also get the total amount of seconds used to process the video. 
 While the code is running, you will be able to the status in percent in the window. 
 
-/Hashemi et al. 2023
+/Hashemi et. al., Acquisition and usage of robotic surgical data for machine learning analysis. Surg Endosc. 2023 Jun 30
